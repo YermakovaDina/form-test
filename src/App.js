@@ -13,8 +13,8 @@ import HomePage from './components/Homepage/Homepage';
 import NotFoundView from './components/NotFoundView/NotFoundView';
 import AppBar from './components/AppBar/AppBar';
 import ExpenseIncome from './components/ExpenseIncome/ExpenseIncome/ExpenseIncome';
-import PrivateRoute from './components/PrivateRoute';
-import PublicRoute from './components/PublicRoute';
+import PrivateRoute from './routes/PrivateRoute';
+import PublicRoute from './routes/PublicRoute';
 
 function App() {
   return (
@@ -32,7 +32,7 @@ function App() {
             <PrivateRoute path="/expense">
               <ExpenseIncome />
             </PrivateRoute>
-            <Route>
+            <Route path="*">
               <NotFoundView />
             </Route>
           </Switch>
